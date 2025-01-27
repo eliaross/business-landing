@@ -12,12 +12,12 @@ import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
 import { getLandingPage } from "@/services/getLandingPage";
 
-type HomePageProps = {
+type LandingPageProps = {
   heroBannerData: HeroBannerProps;
   valuesData: ValuesBlockProps;
 };
 
-const HomePage = ({ heroBannerData, valuesData }: HomePageProps) => (
+const LandingPage = ({ heroBannerData, valuesData }: LandingPageProps) => (
   <>
     <Header />
     <main className="bg-white">
@@ -28,7 +28,7 @@ const HomePage = ({ heroBannerData, valuesData }: HomePageProps) => (
   </>
 );
 
-HomePage.getInitialProps = async () => {
+LandingPage.getInitialProps = async () => {
   const entry = await getLandingPage();
 
   return {
@@ -48,4 +48,4 @@ HomePage.getInitialProps = async () => {
   };
 };
 
-export default HomePage;
+export default LandingPage;

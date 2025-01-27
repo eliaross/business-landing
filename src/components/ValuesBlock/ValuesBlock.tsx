@@ -16,7 +16,10 @@ export const ValuesBlock = ({ group_heading, items }: ValuesBlockProps) => (
     <Typography variant="h3">{group_heading}</Typography>
     <div className="mt-12 flex justify-center gap-16">
       {items.map((item, i) => (
-        <div className="bg-[#9d621e] text-white p-16 pt-4 flex flex-col items-center w-fit">
+        <div
+          key={i}
+          className="bg-[#9d621e] text-white p-16 pt-4 flex flex-col items-center w-fit"
+        >
           <div className="mb-12">
             <Brightness1Icon />
           </div>
